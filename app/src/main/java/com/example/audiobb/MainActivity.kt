@@ -17,9 +17,9 @@ class MainActivity : AppCompatActivity() {
     fun buildBooks() : BookList {
         var books = BookList()
         var bookResource = resources.getStringArray(R.array.bookInfo)
-        for (i in 0..bookResource.size step 2) {
+        for (i in 1..bookResource.size step 2) {
             // grab all the resources from the list and build a bookList from it
-            books.add(Book(bookResource[i], bookResource[i+1]))
+            books.add(Book(bookResource[i-1], bookResource[i]))
         }
 
         return books
