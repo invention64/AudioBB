@@ -8,9 +8,9 @@
     <!-- TODO: Update blank fragment layout -->
 
     <androidx.recyclerview.widget.RecyclerView
-        android:paddingTop="5dp"
         android:id="@+id/bookList"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_width="394dp"
+        android:layout_height="694dp"
+        android:padding="6dp" />
 
 </FrameLayout>

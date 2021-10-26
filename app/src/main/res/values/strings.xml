@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">AudioBB</string>
+    <string name="author_tag">Author:</string>
+    <string name="title_tag">Book Title:</string>
+
     <!--    I'm too lazy to separate this out, and this will make creation easy-->
     <string-array name="bookInfo">
         <item>World Famous Chicken</item>

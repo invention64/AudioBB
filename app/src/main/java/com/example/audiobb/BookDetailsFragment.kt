@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.lifecycle.ViewModelProvider
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,8 +36,20 @@ class BookDetailsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_book_details, container, false)
+        val layout = inflater.inflate(R.layout.fragment_book_details, container, false)
+        val authorText = layout.findViewById<TextView>(R.id.authorDetailsText)
+        val titleText = layout.findViewById<TextView>(R.id.bookDetailsText)
+
+        ViewModelProvider(requireActivity())
+            .get(BookViewModel::class.java)
+            .getBook().observe(requireActivity(), {
+                authorText.text = it.author
+                titleText.text = it.title
+            })
+
+        return layout
     }
+
 
     companion object {
         /**
