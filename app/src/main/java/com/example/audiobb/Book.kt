@@ -2,6 +2,9 @@ package com.example.audiobb
 
 // probably will need to be restructured if it needs to be passed in a weird way
 class Book(var title: String, var author: String) {
+    override fun toString(): String {
+        return "$title by $author"
+    }
 }
 
 class BookList : MutableList<Book> {
@@ -10,6 +13,17 @@ class BookList : MutableList<Book> {
 
     // Is this cheating?
     private var books = mutableListOf<Book>()
+
+    override fun toString(): String {
+        var str = ""
+        for(b in books) {
+            // don't print newline with first book
+            if (b != books[0])
+                str+="\n"
+            str+=b
+        }
+        return str
+    }
 
     /**
      * Adds the specified element to the end of this list.

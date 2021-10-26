@@ -1,3 +1,40 @@
 <resources>
     <string name="app_name">AudioBB</string>
+    <!--    I'm too lazy to separate this out, and this will make creation easy-->
+    <string-array name="bookInfo">
+        <item>World Famous Chicken</item>
+        <item>Karl Morris</item>
+        <item>Cool Websites</item>
+        <item>Sally Kyvernitis</item>
+        <item>Joining the Server-Side</item>
+        <item>Chris Pascucci</item>
+        <item>Managing Life</item>
+        <item>David Benson</item>
+        <item>Pizza Arcade Empire</item>
+        <item>Charles E. Cheese</item>
+        <item>Diners, Drive-Ins, and Dives</item>
+        <item>Guy Fieri</item>
+        <item>Becoming the Pokemon Master</item>
+        <item>Ash Ketchum</item>
+        <item>Frankenstein 2</item>
+        <item>Mary Shelley</item>
+        <item>Airbud: The Book!</item>
+        <item>Air Bud</item>
+        <item>Moonwalking</item>
+        <item>Michael Jackson</item>
+        <item>Trains, Planes, and Automobiles</item>
+        <item>John Ryder</item>
+        <item>Forwards from Grandma</item>
+        <item>Jack Adams</item>
+        <item>How to learn Kotlin in One Day</item>
+        <item>Karl Morris</item>
+        <item>Help I\'m Stuck in a Book Factory</item>
+        <item>Brooke Worker</item>
+        <item>Computers</item>
+        <item>Bill Gates</item>
+        <item>The C Book</item>
+        <item>Kernighan &amp; Ritchie</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
