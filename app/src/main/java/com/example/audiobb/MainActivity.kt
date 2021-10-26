@@ -2,6 +2,8 @@ package com.example.audiobb
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.internal.ContextUtils.getActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -10,6 +12,9 @@ class MainActivity : AppCompatActivity() {
 
         // Create a BookList
         val books = buildBooks()
+        val bookList = ViewModelProvider(this).get(BookListViewModel::class.java)
+        bookList.setBookList(books)
+
 
         println(books)
     }

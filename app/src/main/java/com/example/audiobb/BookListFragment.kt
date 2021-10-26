@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +37,23 @@ class BookListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_book_list, container, false)
+        val layout = inflater.inflate(R.layout.fragment_book_list, container, false)
+        val recyclerView = layout.findViewById<RecyclerView>(R.id.bookList)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        val bookViewModel = ViewModelProvider(requireActivity()).get(BookViewModel::class.java)
+        val bookListViewModel = ViewModelProvider(requireActivity()).get(BookListViewModel::class.java)
+        // dumb way to do this, maybe laggy
+        // TODO: Get rid of this dumb hack
+        val bookList = bookListViewModel.getBookList().value
+        val onClickListener = View.OnClickListener {
+            val bookPos = recyclerView.getChildAdapterPosition(it)
+            // TODO: Error check this, seems like it could break
+            bookViewModel.setBook(bookList?.get(bookPos)!!)
+        }
+
+        recyclerView.adapter = BookAdapter(bookList!!, onClickListener)
+
+        return layout
     }
 
     companion object {
