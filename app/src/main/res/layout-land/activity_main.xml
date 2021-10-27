@@ -15,10 +15,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView4"
+        android:id="@+id/displayContainer"
         android:name="com.example.audiobb.BookDetailsFragment"
-        android:layout_width="344dp"
-        android:layout_height="354dp"
+        android:layout_width="337dp"
+        android:layout_height="345dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.238"
@@ -27,12 +27,12 @@
         app:layout_constraintVertical_bias="0.473" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView5"
+        android:id="@+id/listContainer"
         android:name="com.example.audiobb.BookListFragment"
-        android:layout_width="326dp"
-        android:layout_height="350dp"
+        android:layout_width="308dp"
+        android:layout_height="336dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/fragmentContainerView4"
+        app:layout_constraintEnd_toStartOf="@+id/displayContainer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

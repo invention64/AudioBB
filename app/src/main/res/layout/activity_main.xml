@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
+        android:id="@+id/listContainer"
         android:name="com.example.audiobb.BookListFragment"
         android:layout_width="395dp"
         android:layout_height="697dp"
